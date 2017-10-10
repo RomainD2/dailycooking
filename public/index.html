@@ -13,35 +13,40 @@
   <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
 </head>
 
-<!--Je n'ai pas réussi à changer l'icon de favoris! -->
+<!--Je n'ai pas réussi à changer l'icon de favoris! 
 
-<body data-spy="scroll" data-target=".navbar" data-offset="60"> <!--Le dataoffset ne semble pas fonctionner -->
+  Pourquoi on n'a pas besoin de charger le index.js???
 
-        <nav class="navbar navbar-default navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+-->
+
+<body data-spy="scroll" data-target=".navbar" data-offset="60">
+  <!--Le dataoffset ne semble pas fonctionner -->
+
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                      <a class="navbar-brand" href="#">Daily Cooking - La cuisine saine et facile du quotidien</a>
-                </div>
-                <div class="collapse navbar-collapse" id="myNavbar">
-                        <ul class="nav navbar-nav">
-                            <li><a href="#equilibre">L'équilibre ?</a></li>
-            <li><a href="#recettes">Recettes</a></li>
-            <li><a href="#techniques">Techniques</a></li>
-            <li><a href="#palcard">Ton placard</a></li>
-            <li><a href="#ustensiles">Tes ustensiles</a></li>
-                        </ul>
-                </div>
-            </div>
-        </nav>
+        <a class="navbar-brand" href="#">Daily Cooking - La cuisine saine et facile du quotidien</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="#equilibre">L'équilibre ?</a></li>
+          <li><a href="#recettes">Recettes</a></li>
+          <li><a href="#techniques">Techniques</a></li>
+          <li><a href="#palcard">Ton placard</a></li>
+          <li><a href="#ustensiles">Tes ustensiles</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
 
 
-<!--Tenter une animation de l'assiette et voir les autres animations possibles! -->
+  <!--Tenter une animation de l'assiette et voir les autres animations possibles! -->
 
   <section id="equilibre" class="section-pair">
     <div class="container">
@@ -61,13 +66,18 @@
             <img src="img/assiette_equilibre.png">
           </div>
         </div>
-        
+
       </div>
     </div>
   </section>
 
   <section id="recettes" class="section-impair">
-    <a href="/recepie_page.html" class="btn btn-default equilibre-btn">Test Page Recette</a>
+    <a href="/recettes_all.html" class="btn btn-default equilibre-btn">Toutes les recettes</a>
+    Une div avec seulement les 4-6 premieres recettes de la liste, comment faire? Puis supprimer la section de dessous
+  </section>
+
+  <section id="recettes" class="section-impair">
+    <a href="/recettes_all.html" class="btn btn-default equilibre-btn">Toutes les recettes</a>
     <div id="insertRecepies">
 
     </div>
@@ -96,20 +106,21 @@
   <section id="palcard" class="section-impair">
     <div class="container">
       <div class="col-md-6 col-sm-6">
-          <div class="palcard-right">
-            <h1>Qu'y a-t-il dans ton placard ?</h1>
-            <p>Que ce soit les épices, le riz, les harcots secs en tout genre, et quelques condiments, voici une liste d'aliments à posséder dans son placard pour ne pas se retrouver le bec dans l'eau !</p>
-          </div>
-          <br>
-          <a class="btn btn-default palcard-btn">Remplis ton placard !</a>
+        <div class="palcard-right">
+          <h1>Qu'y a-t-il dans ton placard ?</h1>
+          <p>Que ce soit les épices, le riz, les harcots secs en tout genre, et quelques condiments, voici une liste d'aliments
+            à posséder dans son placard pour ne pas se retrouver le bec dans l'eau !</p>
         </div>
-        <div class="row">
+        <br>
+        <a class="btn btn-default palcard-btn">Remplis ton placard !</a>
+      </div>
+      <div class="row">
         <div class="col-md-6 col-sm-6">
           <div class="palcard-left">
             <img src="img/placard.jpg">
           </div>
         </div>
-        
+
       </div>
     </div>
   </section>
@@ -125,7 +136,8 @@
         <div class="col-md-6 col-sm-6">
           <div class="ustensiles-right">
             <h1>Le matériel de base pour une cuisine efficace au quotidien !</h1>
-            <p>Parce que pour prendre plaisir à cuisiner, il te faut de bons outils! Ne vous inquiétez pas, vous n'aurez pas besoin du dernier gadget culinaire à la mode!</p>
+            <p>Parce que pour prendre plaisir à cuisiner, il te faut de bons outils! Ne vous inquiétez pas, vous n'aurez pas
+              besoin du dernier gadget culinaire à la mode!</p>
           </div>
           <br>
           <a class="btn btn-default ustensiles-btn">De bon ustensiles !</a>
@@ -134,9 +146,9 @@
     </div>
   </section>
 
-<!--Je ne sais pas si je vais pas mettre ce paragraphe sur une autre page pour avoir directement l'assiètte en premier! -->
+  <!--Je ne sais pas si je vais pas mettre ce paragraphe sur une autre page pour avoir directement l'assiètte en premier! -->
 
-    <section id="about" class="section-impair">
+  <section id="about" class="section-impair">
     <div class="container">
       <h1>Pourquoi ce site ?</h1>
       <p>On aime tous partager de bon moment autour de bon repas entre amis, ou des apéro-dinatoires avec des petits toast sympa
@@ -164,7 +176,9 @@
 
   <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <!-- 
+  <!-- Je m'occuperai des animations à la fin!!!
+
+
     <script>
         window.sr = ScrollReveal();
         sr.reveal('.navbar', {
@@ -203,7 +217,7 @@
           viewFactor: 0.2
         });
     </script>
--->
+
   <script>
     $(function () {
       // Smooth Scrolling
@@ -220,7 +234,9 @@
         }
       });
     });
-  </script>
+</script>
+
+-->
 </body>
 
 </html>

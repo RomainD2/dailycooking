@@ -20,10 +20,6 @@ const RecipiePage = () => {
 }
 */
 
-
-
-//C'est ce composant qui doit me retourner mes 6 dernières recettes
-
 class Recepies extends Component {
   state = {
     recettes: recettes //Je charge toutes les recettes, c'est peut être pas la meilleure solution. Voir sur le cours Udemy pour faire une fonction de chargement des recettes
@@ -31,10 +27,8 @@ class Recepies extends Component {
   
   render() {
 
-
-    const cards = Object
-    .keys(this.state.recettes)
-    .map(key => <Card key={key} details={this.state.recettes[key]}/>)// Correspond à toutes nos cartes de recettes
+    const cards = this.state.recettes
+    .map((recette, key) => <Card key={key} details={recette}/>)// Correspond à toutes nos cartes de recettes
 
     return (
       <div className="Recepies">
