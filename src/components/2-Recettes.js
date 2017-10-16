@@ -1,25 +1,25 @@
 import React, { Component } from 'react';
 import Card from './Card';
-import recettes from '../recettes_datas';
+import recettesData from '../recettes_datas';
 
-class RecettesBody extends Component {
-  state = {
-    recettes: recettes
-  };
-  
-  render() {
+class Recettes extends Component {
+    render() {
+        const cards = recettesData
+            .map((recette, key) => (
+                <div className="col-xs-6" style={{height:'300px'}}>
+                    <Card key={key} recette={recette} />
+                </div>
+            )
+            )// Correspond à toutes nos cartes de recettes
 
-    const cards = this.state.recettes
-      .map((recette, key) => <Card key={key} recette={recette} />)// Correspond à toutes nos cartes de recettes
+        return (
 
-    return (
+            <div className="row">
+                {cards}
+            </div>
 
-      <div>
-          {cards}
-      </div>
-
-    );
-  }
+        );
+    }
 }
 
-export default RecettesBody;
+export default Recettes;
