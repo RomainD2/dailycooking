@@ -1,4 +1,5 @@
 import React from 'react';
+import LastRecepies from './LastRecepies';
 
 const HomeBody = () => (
     <div>
@@ -26,8 +27,8 @@ const HomeBody = () => (
         </section>
 
         <section id="recettes" className="section-impair">
+            <LastRecepies />
             <a href="/recettes" className="btn btn-default equilibre-btn">Toutes les recettes</a>
-            Une div avec seulement les 4-6 premieres recettes de la liste, comment faire? Puis supprimer la section de dessous
       </section>
 
         <section id="techniques" className="section-pair">
