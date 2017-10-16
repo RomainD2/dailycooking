@@ -1,7 +1,7 @@
 import React from 'react';
 import LastRecepies from './LastRecepies';
 
-const HomeBody = () => (
+const HomeBody = ({recettes}) => (
     <div>
         <section id="equilibre" className="section-pair">
             <div className="container">
@@ -27,7 +27,7 @@ const HomeBody = () => (
         </section>
 
         <section id="recettes" className="section-impair">
-            <LastRecepies />
+            <LastRecepies recettes={recettes} />
             <a href="/recettes" className="btn btn-default equilibre-btn">Toutes les recettes</a>
       </section>
 

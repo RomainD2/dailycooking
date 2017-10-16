@@ -9,6 +9,7 @@ import Ustensiles from './5-Ustensiles';
 import Recette from './Recette';
 import NavBar from './NavBar';
 import Footer from './Footer';
+import recettes from '../recettes_datas';
 
 const Main = () => (
   <div>
@@ -16,9 +17,9 @@ const Main = () => (
       <Router>
         <div>
           <NavBar />
-          <Route exact path='/' component={Home} />
+          <Route exact path='/' render={()=><Home recettes={recettes} />} />
           <Route exact path='/equilibre' component={Equilibre} />
-          <Route exact path='/recettes' component={Recettes} />
+          <Route exact path='/recettes' render={()=><Recettes recettes={recettes} />} />
           <Route exact path='/techniques' component={Techniques} />
           <Route exact path='/placard' component={Placard} />
           <Route exact path='/ustensiles' component={Ustensiles} />

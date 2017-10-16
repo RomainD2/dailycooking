@@ -1,12 +1,6 @@
 import React, { Component } from 'react';
-import recettes from '../recettes_datas';
+import {getLastRecepies} from '../utils/utils'
 
-/* Fonction pour prendre les 4 dernieres recettes avec le filter, et le sort permet de retourner le tableau*/
-function getLastRecepies(recettes) {
-    return recettes
-    .filter(recette => recette.id>(recettes.length-5))
-    .sort((ra,rb) => (rb.id-ra.id))
-}
 
 const CardLastRecepies = ({recette}) => {
     const {image, nom, descriptif} = recette;
@@ -24,11 +18,9 @@ const CardLastRecepies = ({recette}) => {
     )
 }
 
-class LastRecepies extends Component {
-  render() {
-
+const LastRecepies =({recettes}) => {
     const cards = getLastRecepies(recettes)
-      .map((recette, key) => <CardLastRecepies key={key} recette={recette} />)
+      .map((recette) => <CardLastRecepies key={recette.id} recette={recette} />)
 
     return (
 
@@ -37,7 +29,6 @@ class LastRecepies extends Component {
       </div>
 
     );
-  }
 }
 
 export default LastRecepies;
