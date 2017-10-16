@@ -1,18 +1,25 @@
-import React, {Component} from 'react';
-import NavBar from './NavBar';
-import RecettesBody from './2-RecettesBody';
-import Footer from './Footer';
+import React, { Component } from 'react';
+import Card from './Card';
+import recettes from '../recettes_datas';
 
-class Recettes extends Component {
-    render(){
-        return(
-            <div>
-                <NavBar />
-                <RecettesBody />
-                <Footer />
-            </div>
-        )
-    }
+class RecettesBody extends Component {
+  state = {
+    recettes: recettes
+  };
+  
+  render() {
+
+    const cards = this.state.recettes
+      .map((recette, key) => <Card key={key} recette={recette} />)// Correspond à toutes nos cartes de recettes
+
+    return (
+
+      <div>
+          {cards}
+      </div>
+
+    );
+  }
 }
 
-export default Recettes;
+export default RecettesBody;

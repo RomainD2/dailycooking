@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import recettes from '../recettes_datas';
 
-/* Je vais me faire fâcher, mais je ne vois pas comment faire autrement qu'une boucle for! Je suis sûr qu'il y a mieux! C'est même dégueulasse, mais ça fonctionne lol*/
-var lastRecettes = [];
-for (var i = (recettes.length-1); i > (recettes.length-5); i--) {
-    lastRecettes.push(recettes[i]);
+/* Fonction pour prendre les 4 dernieres recettes avec le filter, et le sort permet de retourner le tableau*/
+function getLastRecepies(recettes) {
+    return recettes
+    .filter(recette => recette.id>(recettes.length-5))
+    .sort((ra,rb) => (rb.id-ra.id))
 }
-
-/* Est ce que je met les datas sur fireBase ???*/
 
 const CardLastRecepies = ({recette}) => {
     const {image, nom, descriptif} = recette;
@@ -25,15 +24,10 @@ const CardLastRecepies = ({recette}) => {
     )
 }
 
-
 class LastRecepies extends Component {
-  state = {
-    lastRecettes: lastRecettes
-  };
-  
   render() {
 
-    const cards = this.state.lastRecettes
+    const cards = getLastRecepies(recettes)
       .map((recette, key) => <CardLastRecepies key={key} recette={recette} />)
 
     return (

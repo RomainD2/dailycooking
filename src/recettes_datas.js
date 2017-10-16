@@ -1,6 +1,7 @@
 // Une liste de recettes pour remplir directement ta boîte !!
 const recettes = [
   {
+    id: 0,
     nom: 'Salade d\'épinards du Soleil',
     descriptif: 'Despriction de la recette',
     image: 'http://img11.hostingpics.net/pics/929653epinards.jpg',
@@ -8,6 +9,7 @@ const recettes = [
     instructions: "Laver et couper en 2 les feuilles d'épinards.\nPréparer une sauce vinaigrette.\nLaver et couper les pommes. Emincer l'oignon. Faire griller le Bacon.\nAjouter le tout aux épinards.\nS'accorde bien avec un Pinot Blanc."
    },
  {
+    id: 1,
     nom: 'Amour de Saumon',
     descriptif: 'Despriction de la recette',
     image: 'http://img11.hostingpics.net/pics/786911saumon2.jpg',
@@ -15,6 +17,7 @@ const recettes = [
     instructions: "Préchauffer le four à 180°C.\nPeler et émincer la gousse d'ail.\nCouper les tomates cerises en deux.\nDéposer chaque pavé de saumon au centre d'une feuille de cuisson et ajouter autour l'ail, les tomates cerises et le jus de citron.\nFermer les papillotes et enfourner 30 minutes.\nS'accorde bien avec un Pouilly Fumé."
   },
  {
+    id: 2,
     nom: 'Hamburger Maison',
     descriptif: 'Despriction de la recette',
     image: 'http://img11.hostingpics.net/pics/177616hamburger.jpg',
@@ -22,6 +25,7 @@ const recettes = [
     instructions: "Peler et couper l'oignon en rondelles puis les faire fondre à la poêle avec une noix de beurre.\nFaire cuire les Steacks.\nFaire revenir les tranches de Bacon.\nFaire dorer les Buns au four.\nMonter le Hamburger dans cet ordre : oignons, bacon, steack, sauce, cheddar, salade.\nS'accorde bien avec un Coca-Cola."
   },
   {
+    id: 3,
     nom: 'Tartines à l\'Italienne',
     descriptif: 'Despriction de la recette',
     image: 'http://img11.hostingpics.net/pics/631970tartines.jpg',
@@ -29,6 +33,7 @@ const recettes = [
     instructions: "Trancher la baguette pour en faire des tartines.\nLes faire légèrement dorer au four avec un peu d'huile d'olive.\nFrotter le pain avec la gousse d'ail coupée en deux.\nTartiner la tapenade sur les tartines.\nAjouter les tranches de jambon et les feuilles de basilic ciselées.\nS'accorde bien avec un Pinot Noir."
   },
   {
+    id: 4,
     nom: 'Pizza au Chorizo',
     descriptif: 'Despriction de la recette',
     image: 'http://img11.hostingpics.net/pics/414170pizza.jpg',
@@ -36,6 +41,7 @@ const recettes = [
     instructions: "Émincer le poivron et le faire revenir dans un peu d'huile.\nÉtaler la sauce tomate sur la pâte à Pizza et ajouter le chorizo et les olives.\nParsemer de fromage rapé.\nEnfourner 20 minutes à 180°C.\nS'accorde bien avec un Madiran."
   },
   {
+    id: 5,
     nom: 'Moelleux au Chocolat',
     descriptif: 'Despriction de la recette',
     image: 'http://img11.hostingpics.net/pics/978685gateau.jpg',

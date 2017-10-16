@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 const styles = { /*Style dans le js, permet d'avoir un composant avec le style d'inclus, à voir par la suite comment je gère ça*/
     boutonRecette:{
         backgroundColor:'white'
@@ -13,7 +15,7 @@ const styles = { /*Style dans le js, permet d'avoir un composant avec le style d
 /* Comment tu arrives à chercher ce genre d'infos sur le net?*/
 
 const Card = ({recette}) => {
-    const {image, nom, descriptif} = recette;
+    const {image, nom, descriptif, id} = recette;
     return (
         <div className="card">
             <div className="image">
@@ -23,7 +25,7 @@ const Card = ({recette}) => {
                 <h2>{nom}</h2>
                 <p>{descriptif}</p>
             </div>
-            <a  href={nom} className="btn btn-default recette-btn" style={styles.boutonRecette}>Voir la recette</a>
+            <Link to={`/recette/${id}`} className="btn btn-default recette-btn" style={styles.boutonRecette}>Voir la recette</Link>
         </div>
     )
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const NavBar = () => (
     <div>
@@ -10,15 +11,15 @@ const NavBar = () => (
                         <span className="icon-bar"></span>
                         <span className="icon-bar"></span>
                     </button>
-                    <a className="navbar-brand" href="">Daily Cooking - La cuisine saine et facile du quotidien</a>
+                    <Link className="navbar-brand" to="/">Daily Cooking - La cuisine saine et facile du quotidien</Link>
                 </div>
                 <div className="collapse navbar-collapse" id="myNavbar">
                     <ul className="nav navbar-nav">
-                        <li><a href="#equilibre">L'équilibre ?</a></li>
-                        <li><a href="#recettes">Recettes</a></li>
-                        <li><a href="#techniques">Techniques</a></li>
-                        <li><a href="#palcard">Ton placard</a></li>
-                        <li><a href="#ustensiles">Tes ustensiles</a></li>
+                        <li><Link to="/equilibre">L'équilibre ?</Link></li>
+                        <li><Link to="/recettes">Recettes</Link></li>
+                        <li><Link to="/techniques">Techniques</Link></li>
+                        <li><Link to="/placard">Ton placard</Link></li>
+                        <li><Link to="/ustensiles">Tes ustensiles</Link></li>
                     </ul>
                 </div>
             </div>
